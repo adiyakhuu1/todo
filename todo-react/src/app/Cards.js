@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { NewPop } from "./NewTaskPopup";
+import { RenderTodo } from "./refresh";
+import tasks from "./tasks.json";
 
 const Cards = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [state, saveState] = useState(false);
 
   return (
     <div className="cards" id="cards">
@@ -14,7 +17,10 @@ const Cards = () => {
               <p>To do</p>
             </div>
           </div>
-          <div className="task-container" id="task-container-todo"></div>
+          <div className="task-container" id="task-container-todo">
+            {/* here */}
+            {state && <RenderTodo tasks={tasks} />}
+          </div>
         </div>
         <div className="card" id="in-progress">
           <div className="status-container">
@@ -47,8 +53,10 @@ const Cards = () => {
       <button id="add-new-button" onClick={() => setIsOpen(true)}>
         Add new task
       </button>
-      <button id="refresh-button">Refresh</button>
-      {isOpen && <NewPop />}
+      <button id="refresh-button" onClick={() => saveState(true)}>
+        Refresh
+      </button>
+      {isOpen && <NewPop sendStatus={setIsOpen} />}
       {/* <button id="test-button" onclick="editTask()">edit task(for test)</button> 
        <div className="add-new-popup" id="add-new-popup"></div>  */}
     </div>

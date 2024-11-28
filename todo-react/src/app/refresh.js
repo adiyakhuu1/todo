@@ -1,23 +1,35 @@
-import tasks from "tasks.json";
-import CreateElement from "./CreateTaskElement.js";
+// const RenderTasks = tasks.map((task) => {
+//   return (
+//     <div className="task">
+//       <input type="radio" />
+//       <p className="todo-name">{task.name}</p>
+//       <div className="task-options">
+//         <a href="#">
+//           <img src="./edit.svg" />
+//         </a>
+//         <a href="#">
+//           <img src="./delete.svg" />
+//         </a>
+//       </div>
+//     </div>
+//   );
+// });
 
-tasks.map((task) => {
-  document.getElementById("task-container-todo").innerHTML = "";
-  document.getElementById("task-container-inprogress").innerHTML = "";
-  document.getElementById("task-container-done").innerHTML = "";
-  document.getElementById("task-container-blocked").innerHTML = "";
+const RenderTodo = ({ tasks }) => {
+  return tasks.map((task) => (
+    <div className="task">
+      <input type="radio" />
+      <p className="todo-name">{task.name}</p>
+      <div className="task-options">
+        <a href="#">
+          <img src="./edit.svg" />
+        </a>
+        <a href="#">
+          <img src="./delete.svg" />
+        </a>
+      </div>
+    </div>
+  ));
+};
 
-  //   let task = todos[i];
-  let taskElement = createTaskElement(task);
-  if (task.status == "todo") {
-    document.getElementById("task-container-todo").appendChild(taskElement);
-  } else if (task.status == "done") {
-    document.getElementById("task-container-done").appendChild(taskElement);
-  } else if (task.status == "in-progress") {
-    document
-      .getElementById("task-container-inprogress")
-      .appendChild(taskElement);
-  } else if (task.status == "blocked") {
-    document.getElementById("task-container-blocked").appendChild(taskElement);
-  }
-});
+export { RenderTodo };

@@ -172,14 +172,25 @@
   border-radius: 15px;
 }
 .little-window {
-  width: 18.125rem;
-  height: 19rem;
+  width: 290px;
+  height: 304px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 #little-window1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.popup-top-text{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.05px;
+}
+.popup-forms{
+  /* position: "absolute"; */
+  /* top: "0";  */
 }
 #popup-header {
   /* position: absolute; */

@@ -3,14 +3,14 @@ const EditPopup = () => {
     <div className="add-new-popup" id="edit-popup">
       <div className="little-window">
         <div id="popup-header">
-          <p style={{ fontSize: 24, fontWeight: 700, lineHeight: 29.05 }}>
+          <p className="popup-top-text">
             Edit task
           </p>
           <a className="exit-button" id="exit-edit" href="#">
             <img src="./close.svg" alt="" style={{ width: 30 }} />
           </a>
         </div>
-        <div>
+        <div className="popup-forms">
           <input
             className="forms"
             id="select-status2-1"

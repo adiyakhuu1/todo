@@ -1,7 +1,7 @@
 "use client";
 // import Image from "next/image";
 import "./style.css";
-import tasks from "./task.json";
+import tasks from "./tasks.json";
 import { EditPopup } from "./EditPopup";
 import { DeletePopup } from "./DeletePopup";
 import { NewPop, newPop } from "./NewTaskPopup";
@@ -17,8 +17,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <EditPopup /> */}
-      {/* <DeletePopup /> */}
       <Cards />
     </div>
   );

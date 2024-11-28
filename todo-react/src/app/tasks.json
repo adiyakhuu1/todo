@@ -1,8 +1,5 @@
 [
-  {
-    "name": "watch a movie",
-    "status": "todo"
-  },
+  { "name": "watch a movie", "status": "todo" },
   { "name": "go walk", "status": "done" },
   { "name": "practice js", "status": "in-progress" },
   { "name": "practice js", "status": "in-progress" },
