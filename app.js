@@ -151,7 +151,6 @@ function refresh() {
         .appendChild(taskElement);
     }
   }
-  displayNone();
 }
 
 function addNew() {
