@@ -8,13 +8,19 @@ import { NewPop, newPop } from "./NewTaskPopup";
 import { Cards } from "./Cards";
 import { useState } from "react";
 
-// import { useState } from "react";
-
 // const [isVisible, IsHidden] = useState(false);
 
 export default function Home() {
-  // const newTaskButton = document.getElementById("add-new-button");
-
+  // let [index, setIndex] = useState(0);
+  // // const newTaskButton = document.getElementById("add-new-button");
+  // const addIndex = () => {
+  //   setIndex(index + 1);
+  //   console.log(index);
+  // };
+  // const subIndex = () => {
+  //   setIndex(index - 1);
+  //   console.log(index);
+  // };
   return (
     <div>
       <Cards />

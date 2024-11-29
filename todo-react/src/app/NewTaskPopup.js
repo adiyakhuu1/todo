@@ -1,10 +1,10 @@
 import { useState } from "react";
 // import { Cards } from "./Cards";
 
-function NewPop({sendStatus}) {
+function NewPop({ sendStatus }) {
   // const [isOpen, setIsOpen2] = useState(false);
   // theStatus = props.setIsOpen
-  function CloseThePopup(){
+  function CloseThePopup() {
     sendStatus(false);
   }
 
@@ -12,14 +12,17 @@ function NewPop({sendStatus}) {
     <div className="add-new-popup" id="add-new-popup">
       <div className="little-window">
         <div id="popup-header">
-          <p className="popup-top-text">
-            Enter task
-          </p>
+          <p className="popup-top-text">Enter task</p>
           <a className="exit-button" id="exit-add" href="#">
-            <img src="./close.svg" onClick={CloseThePopup} alt="" style={{ width: 30 }} />
+            <img
+              src="./close.svg"
+              onClick={CloseThePopup}
+              alt=""
+              style={{ width: 30 }}
+            />
           </a>
         </div>
-        <div className="popup-forms" >
+        <div className="popup-forms">
           <input
             className="forms"
             id="select-status1"

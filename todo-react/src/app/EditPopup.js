@@ -3,10 +3,14 @@ const EditPopup = () => {
     <div className="add-new-popup" id="edit-popup">
       <div className="little-window">
         <div id="popup-header">
-          <p className="popup-top-text">
-            Edit task
-          </p>
-          <a className="exit-button" id="exit-edit" href="#">
+          <p className="popup-top-text">Edit task</p>
+          <a
+            onClick={() => {
+              savePopState(false);
+            }}
+            className="exit-button"
+            id="exit-edit"
+            href="#">
             <img src="./close.svg" alt="" style={{ width: 30 }} />
           </a>
         </div>
