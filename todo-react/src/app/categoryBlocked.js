@@ -1,6 +1,9 @@
 import tasks from "./tasks.json";
+import { useState } from "react";
+import { EditPopup } from "./EditPopup";
 
 const CategoryBlocked = () => {
+  const [editPop, saveEditPop] = useState(false);
   const list = [];
   // let container;
   for (let i = 0; i < tasks.length; i++) {
@@ -10,13 +13,19 @@ const CategoryBlocked = () => {
           <input type="radio" />
           <p className="todo-name">{tasks[i].name}</p>
           <div className="task-options">
-            <a href="#">
+            <a
+              onClick={() => {
+                saveEditPop(true);
+              }}
+              href="#"
+            >
               <img src="./edit.svg" />
             </a>
             <a href="#">
               <img src="./delete.svg" />
             </a>
           </div>
+          {editPop && <EditPopup sendStatus={saveEditPop} />}
         </div>
       );
 

@@ -17,13 +17,15 @@ const CategoryTodo = () => {
               onClick={() => {
                 savePopState(true);
               }}
-              href="#">
+              href="#"
+            >
               <img src="./edit.svg" />
             </a>
             <a href="#">
               <img src="./delete.svg" />
             </a>
           </div>
+          {editPop && <EditPopup sendStatus={savePopState} />}
         </div>
       );
       // return container;

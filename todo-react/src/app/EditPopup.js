@@ -1,16 +1,18 @@
-const EditPopup = () => {
+const EditPopup = ({ sendStatus }) => {
+  function CloseThePopup() {
+    sendStatus(false);
+  }
   return (
     <div className="add-new-popup" id="edit-popup">
       <div className="little-window">
         <div id="popup-header">
           <p className="popup-top-text">Edit task</p>
           <a
-            onClick={() => {
-              savePopState(false);
-            }}
+            onClick={CloseThePopup}
             className="exit-button"
             id="exit-edit"
-            href="#">
+            href="#"
+          >
             <img src="./close.svg" alt="" style={{ width: 30 }} />
           </a>
         </div>
